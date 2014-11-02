@@ -1,0 +1,20 @@
+{% extends "contentGenerator/_master" %}
+
+{% set selectedTab = 'channels' %}
+{% set title = "Content Generator"|t %}
+
+{% set content %}
+    {% set sections = craft.contentGenerator.returnSections() %}
+
+    <h1>Channels</h1>
+     <form action="" method="POST">
+	    <input type="hidden" name="action" value="contentGenerator/main/generateEntries">
+	    <input type="hidden" name="redirect" value="contentGenerator/main">
+	    {% for section in sections %}
+	    	{% if section.type == "channel" %}
+	    		{{ section }} <input type="number" name="sect[{{ loop.index - 1 }}][amount]"><input type="hidden" name="sect[{{ loop.index - 1 }}][handle]" value="{{ section.handle }}"><br>
+	    	{% endif %}
+	    {% endfor %}
+	     <input class="btn submit" type="submit" value="{{ 'Submit'|t }}">
+    </form>
+{% endset %}

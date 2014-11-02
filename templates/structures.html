@@ -1,0 +1,15 @@
+{% extends "contentGenerator/_master" %}
+
+{% set selectedTab = 'structures' %}
+{% set title = "Content Generator"|t %}
+
+{% set content %}
+    {% set sections = craft.contentGenerator.returnSections() %}
+
+    <h1>Structures</h1>
+    {% for section in sections %}
+    	{% if section.type == "structure" %}
+    		{{ section }} <br>
+    	{% endif %}
+    {% endfor %}
+{% endset %}

@@ -1,0 +1,9 @@
+{% extends "_layouts/cp" %}
+
+{% set sections = craft.contentGenerator.returnSections() %}
+
+{% set tabs = {
+	singles: { label: "Singles"|t, url: url('contentGenerator')},
+	channels: { label: "Channels"|t, url: url('contentGenerator/channels') },
+    structures: { label: "Structures"|t, url: url('contentGenerator/structures') }
+} %}
