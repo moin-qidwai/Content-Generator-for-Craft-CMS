@@ -1,10 +1,10 @@
-Collaborative-Paint-in-Java
+Content-Generator-for-Craft-CMS
 ===========================
 
-This is a paint program for collaborative painting over a network by multiple users.
+This is a plugin for the Craft CMS that generates dummy entries for the section of your choice. It is a work in progress.
 
 
 DETAILED DESCRIPTION:
 ---------------------
 
-This is a program that provides a simple interface for painting with your friends over a network. Multiple users can connect at the same time and what one user paints will be immediately send to all users connected to the server. The program can be run as both server and client. One user must be the server (although he/she can run the program as a client themself as well) while others are clients.
+This plugin gives users the ability to select a section of their choice and then create a number of dummy entries. This might mainly be used for testing and filling in websites with content for showcasing to clients. It is currently a work in  progress and any contribution will be greatly appreciated.
